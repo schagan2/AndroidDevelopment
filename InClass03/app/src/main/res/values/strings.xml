@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Registration</string>
+    <string name="name">Name:</string>
+    <string name="email">Email:</string>
+    <string name="id">ID:</string>
+    <string name="dept">Dept:</string>
+    <string name="submit">Submit</string>
+    <string name="select">Select</string>
+    <string name="name_hint">Enter Name</string>
+    <string name="email_hint">Enter Email</string>
+    <string name="id_hint">Enter ID</string>
+    <string name="datsScience">Data Science</string>
+    <string name="bioInformatics">Bio Informatics</string>
+    <string name="software">Software Info. Systems</string>
+    <string name="computerScience">Computer Science</string>
+    <string name="cancel">Cancel</string>
+    <string name="toast_name">Name should not be empty</string>
+    <string name="toast_email">Email should not be empty</string>
+    <string name="toast_id">ID should not be empty</string>
+    <string name="toast_dept">Department should not be empty</string>
+    <string name="toast_cancel">Selection Cancelled</string>
+</resources>

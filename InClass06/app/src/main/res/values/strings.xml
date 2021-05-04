@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">InClass06</string>
+    <string name="thread_button">Generate using Thread</string>
+    <string name="async_task_button">Generate using Async Task</string>
+    <string name="select_complexity">Select Complexity</string>
+    <string name="times">Times</string>
+    <string name="main_activity">Main Activity</string>
+    <string name="average">Average:</string>
+</resources>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Forums</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create new Account</string>
+    <string name="name">Name</string>
+    <string name="submit">Submit</string>
+    <string name="logout">Log out</string>
+    <string name="new_forum">New Forum</string>
+    <string name="forum_desc">Forum Description</string>
+    <string name="forum_title">Forum Title</string>
+    <string name="post">Post</string>
+    <string name="write_comment">Write Comment</string>
+    <string name="forums">Forums</string>
+    <string name="create_forum">Create Forum</string>
+    <string name="forum">Forum</string>
+</resources>

@@ -1,0 +1,95 @@
+package com.example.hw03;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+import java.util.ArrayList;
+
+/*
+ * Assignment - HW03
+ * File name: MainActivity.java[HW03.app]
+ * Names of the students: Aakansha Chauhan, Sindhura Chaganti
+ */
+public class MainActivity extends AppCompatActivity implements LoginFragment.AccountListener, RegisterFragment.RegisterListener,
+        AppCategoryFragment.AppListener, AppListFragment.AppListListener {
+
+    String token;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        //Setting login page when opening the app
+        setTitle(R.string.login);
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.containerView, new LoginFragment())
+                .commit();
+    }
+
+    @Override
+    public void setAccount(String accountId) {
+        //When successful login, goes to app category fragment
+        setTitle(R.string.app_category);
+        token = accountId;
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.containerView, AppCategoryFragment.newInstance(accountId))
+                .commit();
+    }
+
+    @Override
+    public void setRegisterFragment() {
+        //Will open register page
+        setTitle(R.string.register_account);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.containerView, new RegisterFragment())
+                .commit();
+    }
+
+    @Override
+    public void afterRegistration(String token) {
+        //Will open app category page after successful registration
+        this.token = token;
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.containerView, AppCategoryFragment.newInstance(this.token))
+                .commit();
+    }
+
+    @Override
+    public void setLoginAfterCancel() {
+        //After clicking cancel on register fragment, should return to login page
+        setTitle(R.string.login);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.containerView, new LoginFragment())
+                .commit();
+    }
+
+    @Override
+    public void setAppListFragment(String appCategory) {
+        //Will direct to app list page after selecting the category
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.containerView, AppListFragment.newInstance(token, appCategory))
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void loginAfterLogout() {
+        //will open login page after logout
+        setTitle(R.string.login);
+        token = null;
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.containerView, new LoginFragment())
+                .commit();
+    }
+
+    @Override
+    public void setAppDetails(DataServices.App app) {
+        //Goes to app details page
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.containerView, AppDetailsFragment.newInstance(app))
+                .addToBackStack(null)
+                .commit();
+    }
+}

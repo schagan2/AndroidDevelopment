@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/dateAndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/forecastTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateAndTime" />
+
+    <TextView
+        android:id="@+id/forecastHumidityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/forecast_humidity"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forecastTemp" />
+
+    <TextView
+        android:id="@+id/forecastDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forecastHumidityLabel" />
+
+    <ImageView
+        android:id="@+id/weatherIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/dateAndTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/screen_background_light" />
+
+    <TextView
+        android:id="@+id/forecastMaxLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/max"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/forecastTemp"
+        app:layout_constraintStart_toEndOf="@+id/forecastTemp" />
+
+    <TextView
+        android:id="@+id/forecastMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/forecastMaxLabel"
+        app:layout_constraintStart_toEndOf="@+id/forecastMaxLabel" />
+
+    <TextView
+        android:id="@+id/forecastMinLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/min"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/forecastMax"
+        app:layout_constraintStart_toEndOf="@+id/forecastMax" />
+
+    <TextView
+        android:id="@+id/forecastMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/forecastMinLabel"
+        app:layout_constraintStart_toEndOf="@+id/forecastMinLabel" />
+
+    <TextView
+        android:id="@+id/forecastHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/forecastHumidityLabel"
+        app:layout_constraintStart_toEndOf="@+id/forecastHumidityLabel" />
+</androidx.constraintlayout.widget.ConstraintLayout>

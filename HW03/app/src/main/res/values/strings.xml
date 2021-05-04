@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">HW03</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="create_account">Create New Account</string>
+    <string name="app_category">App Categories</string>
+    <string name="register_account">Register Account</string>
+    <string name="name">Name</string>
+    <string name="submit">Submit</string>
+    <string name="logout">Log Out</string>
+    <string name="welcome">Welcome&#160;</string>
+    <string name="genre">Genres</string>
+    <string name="app_details">App Details</string>
+</resources>

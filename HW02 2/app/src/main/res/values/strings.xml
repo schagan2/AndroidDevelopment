@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">HW02</string>
+    <string name="view">VIEW TASKS</string>
+    <string name="create">CREATE A TASK</string>
+    <string name="tasks_view">You have %1$d tasks</string>
+    <string name="task_info">Task Information</string>
+    <string name="name">Name:</string>
+    <string name="date">Date:</string>
+    <string name="priority">Priority:</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    <string name="task_name">Task Name</string>
+    <string name="set_date">Set Date</string>
+    <string name="submit">Submit</string>
+    <string name="high">High</string>
+    <string name="medium">Medium</string>
+    <string name="low">Low</string>
+    <string name="upcoming_task">Upcoming Tasks</string>
+    <string name="confirm">Confirmation</string>
+    <string name="ok">OK</string>
+    <string name="message_display">Are you sure to delete the task?</string>
+    <string name="none">None</string>
+    <string name="task_name_warning">Enter Task Name</string>
+    <string name="task_priority_warning">Select the priority of task</string>
+    <string name="task_date_warning">Enter the date</string>
+    <string name="empty_list">No tasks</string>
+</resources>
