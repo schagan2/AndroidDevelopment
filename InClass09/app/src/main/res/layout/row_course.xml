@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/courseGrade"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#000000"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/courseNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/courseGrade"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/courseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/courseGrade"
+        app:layout_constraintTop_toBottomOf="@+id/courseNumber" />
+
+    <TextView
+        android:id="@+id/creditHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/courseGrade"
+        app:layout_constraintStart_toEndOf="@+id/courseGrade"
+        app:layout_constraintTop_toBottomOf="@+id/courseName" />
+
+    <ImageButton
+        android:id="@+id/deleteButton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@+id/courseGrade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/rubbish_bin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
